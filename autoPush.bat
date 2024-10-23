@@ -2,7 +2,7 @@
 REM Script para automatizar o processo de git stage, commit e push
 
 REM Navegar até o diretório do repositório (substitua pelo caminho correto)
-cd C:\caminho\para\seu\repositorio
+cd C:\Users\dcesar\eclipse-workspace\Leaderboard
 
 REM Adiciona todos os arquivos modificados para o stage
 git add .

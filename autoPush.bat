@@ -12,5 +12,3 @@ git commit -m "Commit Proj"
 
 REM Faz o push para o repositório remoto
 git push origin main
-
-pause

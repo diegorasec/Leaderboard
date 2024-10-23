@@ -51,8 +51,8 @@ public class Core {
 			        
 			        // Espera o processo finalizar
 			        process.waitFor();
-					System.out.println("Commited");
-					Thread.sleep(6000);
+
+					Thread.sleep(60000);
 				}
 			} catch (Exception e) {
 				e.printStackTrace();

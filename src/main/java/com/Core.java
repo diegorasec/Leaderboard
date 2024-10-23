@@ -47,12 +47,11 @@ public class Core {
 			        builder.inheritIO();
 			        
 			        // Inicia o processo
-			        Process process = builder.start(); 
+			        builder.start(); 
 			        
 			        // Espera o processo finalizar
-			        process.waitFor();
-
-					Thread.sleep(60000);
+			        //process.waitFor();
+					Thread.sleep(120000);
 				}
 			} catch (Exception e) {
 				e.printStackTrace();

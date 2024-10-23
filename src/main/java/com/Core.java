@@ -26,13 +26,29 @@ public class Core {
 
 	static String PATH_RESOURCES = "C:\\Users\\dcesar\\eclipse-workspace\\Leaderboard\\src\\main\\resources\\";
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		Map<Categoria, List<Equipe>> lead = carregaLeaderboard();
 		calculaPontos(lead);
 		
 		// Cria o HTML do Leaderboard
 		String filePath = "leaderboard.html";
 		criaLeaderboard(filePath, lead);
+		
+		//Chamada bat para atualizar html no git
+        String caminhoDoBat = "C:\\Users\\dcesar\\eclipse-workspace\\Leaderboard\\autoPush.bat";
+        
+        // Configura e executa o ProcessBuilder
+        ProcessBuilder builder = new ProcessBuilder(Arrays.asList("cmd.exe", "/c", caminhoDoBat));
+        
+        // Redireciona a saída e erros para o console
+        builder.inheritIO();
+        
+        // Inicia o processo
+        Process process = builder.start();
+        
+        // Espera o processo finalizar
+        process.waitFor();
+        System.out.println("Script .bat executado com sucesso!");		
 
 	}
 

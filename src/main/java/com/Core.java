@@ -199,6 +199,7 @@ public class Core {
 		.append("        th {\r\n")
 		.append("            background-color: #131517;\r\n")
 		.append("            color: #1F687D;\r\n")
+		.append("            cursor: pointer;\r\n")
 		.append("        }\r\n")
 		.append("        tr:nth-child(even) {\r\n")
 		.append("            background-color: #32393E;\r\n")
@@ -233,15 +234,16 @@ public class Core {
 	}
 	public static String commomHeadTable() {
 		StringBuilder head = new StringBuilder();
-		head.append("<table>\n")
+		head.append("<table id=\"leadTable\">\n")
 		.append("    <thead>\n")
 		.append("        <tr>\n")
-		.append("            <th>RANK</th>\n")
-		.append("            <th>NAME</th>\n")
-		.append("            <th>POINTS</th>\n");
-		
+		.append("            <th onclick=\"sortTable(0)\">RANK</th>\n")
+		.append("            <th onclick=\"sortTable(1)\">NAME</th>\n")
+		.append("            <th onclick=\"sortTable(2)\">POINTS</th>\n");
+		int ind = 3;
 		for(Wod w : readCSVWods()) {
-			head.append("            <th>"+w.getNome()+"</th>\n");
+			head.append("            <th onclick=\"sortTable("+ind+")\">"+w.getNome()+"</th>\n");
+			ind++;
 		}
 		head.append("        </tr>\n")
 		.append("    </thead>\n");
@@ -250,14 +252,78 @@ public class Core {
 	public static String renderFooter() {
 		StringBuilder foot = new StringBuilder();
 		
-		foot.append(" <script> ");
-		foot.append(" function showDiv(divId) { ");
-		foot.append("    document.getElementById('Iniciante').style.display = 'none'; ");
-		foot.append("    document.getElementById('Scale').style.display = 'none'; ");
-		foot.append("    document.getElementById('RX').style.display = 'none'; ");
-		foot.append("    document.getElementById(divId).style.display = 'block'; ");
-		foot.append("} ");
-		foot.append("</script> ");		
+		foot.append(" <script>\r\n"
+				+ "    function sortTable(columnIndex) {\r\n"
+				+ "        var table, rows, switching, i, x, y, shouldSwitch, direction, switchcount = 0;\r\n"
+				+ "        table = document.getElementById(\"leadTable\");\r\n"
+				+ "        switching = true;\r\n"
+				+ "        direction = \"asc\"; // Começa com ordem ascendente\r\n"
+				+ "\r\n"
+				+ "        while (switching) {\r\n"
+				+ "            switching = false;\r\n"
+				+ "            rows = table.rows;\r\n"
+				+ "\r\n"
+				+ "            // Percorre as linhas da tabela\r\n"
+				+ "            for (i = 1; i < (rows.length - 1); i++) {\r\n"
+				+ "                shouldSwitch = false;\r\n"
+				+ "                \r\n"
+				+ "                // Obtém os elementos das células a serem comparadas\r\n"
+				+ "                x = rows[i].getElementsByTagName(\"TD\")[columnIndex];\r\n"
+				+ "                y = rows[i + 1].getElementsByTagName(\"TD\")[columnIndex];\r\n"
+				+ "                \r\n"
+				+ "                // Extrai o valor dentro dos parênteses\r\n"
+				+ "                var xValue = extractValueFromParentheses(x.innerHTML);\r\n"
+				+ "                var yValue = extractValueFromParentheses(y.innerHTML);\r\n"
+				+ "\r\n"
+				+ "                // Compara os valores\r\n"
+				+ "                if (direction == \"asc\") {\r\n"
+				+ "					if (columnIndex === 1) {\r\n"
+				+ "						if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {\r\n"
+				+ "							shouldSwitch = true;\r\n"
+				+ "							break;\r\n"
+				+ "						}\r\n"
+				+ "					} else {\r\n"
+				+ "						if (parseFloat(xValue) > parseFloat(yValue)) {\r\n"
+				+ "							shouldSwitch = true;\r\n"
+				+ "							break;\r\n"
+				+ "						}\r\n"
+				+ "					}\r\n"
+				+ "                } else if (direction == \"desc\") {\r\n"
+				+ "					if (columnIndex === 1) {\r\n"
+				+ "						if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {\r\n"
+				+ "							shouldSwitch = true;\r\n"
+				+ "							break;\r\n"
+				+ "						}\r\n"
+				+ "					} else {\r\n"
+				+ "						if (parseFloat(xValue) > parseFloat(yValue)) {\r\n"
+				+ "							shouldSwitch = true;\r\n"
+				+ "							break;\r\n"
+				+ "						}\r\n"
+				+ "					}\r\n"
+				+ "				}\r\n"
+				+ "            }\r\n"
+				+ "\r\n"
+				+ "            if (shouldSwitch) {\r\n"
+				+ "                // Faz a troca de posições das linhas\r\n"
+				+ "                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);\r\n"
+				+ "                switching = true;\r\n"
+				+ "                switchcount++;\r\n"
+				+ "            } else {\r\n"
+				+ "                // Se não houve troca e a direção era ascendente, muda para descendente\r\n"
+				+ "                if (switchcount === 0 && direction === \"asc\") {\r\n"
+				+ "                    direction = \"desc\";\r\n"
+				+ "                    switching = true;\r\n"
+				+ "                }\r\n"
+				+ "            }\r\n"
+				+ "        }\r\n"
+				+ "    }\r\n"
+				+ "\r\n"
+				+ "    // Função para extrair o valor dentro dos parênteses\r\n"
+				+ "    function extractValueFromParentheses(text) {\r\n"
+				+ "        var match = text.match(/\\(([^)]+)\\)/);\r\n"
+				+ "        return match ? match[1] : text;\r\n"
+				+ "    }\r\n"
+				+ "</script>");		
 		
 		
 		foot.append("</body>\r\n" + "</html>");
@@ -295,9 +361,9 @@ public class Core {
 						while ((l = r.readNext()) != null) {
 							for(Wod w : foundWods) {
 								if(w.getId().equals(wodNum)  &&
-										!l[wodNum].isEmpty() &&
+										!l[wodNum+1].isEmpty() &&
 										e.getId().equals(Integer.valueOf(l[0]))) {
-									Result res = new Result(w, e, l[wodNum], 0, 0);
+									Result res = new Result(w, e, l[wodNum+1], 0, 0);
 									result.add(res);
 									wodNum++;
 								}								

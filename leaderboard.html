@@ -27,6 +27,7 @@
         th {
             background-color: #131517;
             color: #1F687D;
+			cursor: pointer;			
         }
         tr:nth-child(even) {
             background-color: #32393E;
@@ -51,12 +52,12 @@
 <body>
 
 <h1>PENTA LEAGUE</h1>
-<table>
+<table id="leadTable">
     <thead>
         <tr>
-            <th>RANK</th>
-            <th>NAME</th>
-            <th>POINTS</th>
+			<th onclick="sortTable(0)">RANK</th>
+            <th onclick="sortTable(1)">NAME</th>
+            <th onclick="sortTable(2)">POINTS</th>		
             <th>HELP ME</th>
             <th>ARE YOU KAREN ?</th>
             <th>LOVE OR HATE</th>
@@ -299,5 +300,61 @@
     </tbody>
 </table>
 </div>
- <script>  function showDiv(divId) {     document.getElementById('Iniciante').style.display = 'none';     document.getElementById('Scale').style.display = 'none';     document.getElementById('RX').style.display = 'none';     document.getElementById(divId).style.display = 'block'; } </script> </body>
+<script>
+    function sortTable(columnIndex) {
+        var table, rows, switching, i, x, y, shouldSwitch, direction, switchcount = 0;
+        table = document.getElementById("leadTable");
+        switching = true;
+        direction = "asc"; // Começa com ordem ascendente
+
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[columnIndex];
+                y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
+
+                if (direction == "asc") {
+                    if (columnIndex === 1) {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else {
+                        if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                            shouldSwitch = true;
+                            break;
+                        }						
+                    }
+                } else if (direction == "desc") {
+                    if (columnIndex === 1) {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else {
+                        if (Number(x.innerHTML) < Number(y.innerHTML)) {
+                            shouldSwitch = true;
+                            break;
+                        }						
+                    }
+                }
+            }
+
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount++;
+            } else {
+                if (switchcount == 0 && direction == "asc") {
+                    direction = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
+ </body>
 </html>

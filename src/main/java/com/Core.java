@@ -44,12 +44,10 @@ public class Core {
         builder.inheritIO();
         
         // Inicia o processo
-        Process process = builder.start();
+        Process process = builder.start(); 
         
         // Espera o processo finalizar
         process.waitFor();
-        System.out.println("Script .bat executado com sucesso!");		
-
 	}
 
 

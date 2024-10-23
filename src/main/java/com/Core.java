@@ -76,7 +76,6 @@ public class Core {
 				for(Result r : e.getResult()) {
 					if(r.getPosition().equals(1)) {
 						htmlContent.append(" <td style=\"color: #bd9422; font-size: 16px; font-weight: bold;\"> ");
-						htmlContent.append("<img src=\""+PATH_RESOURCES+"Gold.png\">");
 						htmlContent.append("("+r.getPosition()+") "+r.getResult()+" </td>\n");
 					} else {
 						htmlContent.append(" <td style=\"color: #fff; font-size: 16px;\">("+r.getPosition()+") "+r.getResult()+" </td>\n");	

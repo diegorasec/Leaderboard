@@ -32,25 +32,12 @@ public class Core {
 				while (true) {
 					Map<Categoria, List<Equipe>> lead = carregaLeaderboard();
 					calculaPontos(lead);
-					
-					// Cria o HTML do Leaderboard
 					String filePath = "leaderboard.html";
 					criaLeaderboard(filePath, lead);
-					
-					//Chamada bat para atualizar html no git
 			        String caminhoDoBat = "C:\\Users\\dcesar\\eclipse-workspace\\Leaderboard\\autoPush.bat";
-			        
-			        // Configura e executa o ProcessBuilder
 			        ProcessBuilder builder = new ProcessBuilder(Arrays.asList("cmd.exe", "/c", caminhoDoBat));
-			        
-			        // Redireciona a saída e erros para o console
 			        builder.inheritIO();
-			        
-			        // Inicia o processo
 			        builder.start(); 
-			        
-			        // Espera o processo finalizar
-			        //process.waitFor();
 					Thread.sleep(120000);
 				}
 			} catch (Exception e) {
@@ -412,7 +399,7 @@ public class Core {
 		List<Categoria> categorias = new ArrayList<Categoria>();
 		try (CSVReader reader = new CSVReader(new FileReader(PATH_RESOURCES + "categorias.csv"))) {
 			String[] line;
-			reader.readNext(); // Ignorar a primeira linha (cabeçalhos)
+			reader.readNext();
 
 			while ((line = reader.readNext()) != null) {
 				Categoria cat = new Categoria(Integer.valueOf(line[0]), line[1]);
@@ -428,7 +415,7 @@ public class Core {
 		List<TipoResultado> tipos = new ArrayList<TipoResultado>();
 		try (CSVReader reader = new CSVReader(new FileReader(PATH_RESOURCES + "tipoResultado.csv"))) {
 			String[] line;
-			reader.readNext(); // Ignorar a primeira linha (cabeçalhos)
+			reader.readNext();
 
 			while ((line = reader.readNext()) != null) {
 				TipoResultado cat = new TipoResultado(Integer.valueOf(line[0]), line[1]);
@@ -444,7 +431,7 @@ public class Core {
 		List<Wod> wods = new ArrayList<Wod>();
 		try (CSVReader reader = new CSVReader(new FileReader(PATH_RESOURCES + "wods.csv"))) {
 			String[] line;
-			reader.readNext(); // Ignorar a primeira linha (cabeçalhos)
+			reader.readNext();
 
 			while ((line = reader.readNext()) != null) {
 				if (line.length > 1) {

@@ -189,7 +189,7 @@ public class Core {
 		.append("    <meta charset=\"UTF-8\">\r\n")
 		.append("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n")
 		.append("    <title>PENTA  League</title>\r\n")
-		.append("    <link rel=\"icon\" href=\"src/main/resources/iconLeague.ico\" type=\"image/x-icon\">/r/n")
+		.append("    <link rel=\"icon\" href=\"src/main/resources/iconLeague.ico\" type=\"image/x-icon\">\r\n")
 		.append("    <style>\r\n")
 		.append("        body {\r\n")
 		.append("            font-family: Arial, sans-serif;\r\n")

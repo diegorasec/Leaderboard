@@ -84,6 +84,7 @@ public class Core {
 					.append("            <td>" + i + "</td>\n")
 					.append("            <td>" + e.getNome() + "</td>\n")
 					.append("            <td> "+ e.getPoints() + " </td>\n");
+					positionLast = i;
 				}
 				
 				for(Result r : e.getResult()) {
@@ -97,7 +98,6 @@ public class Core {
 				}
 				htmlContent.append("</tr>\n");
 				pointsLast = e.getPoints();
-				positionLast = i;
 				i++;
 			}
 			htmlContent.append("        </tr>\n")

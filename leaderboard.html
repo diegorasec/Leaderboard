@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PENTA  League</title>
-    <style>
+    <link rel="icon" href="src/main/resources/iconLeague.ico" type="image/x-icon">/r/n    <style>
         body {
             font-family: Arial, sans-serif;
             color:#fff;
@@ -15,18 +15,18 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            background-color: #1C1F22;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            background-color: #26292B;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         }
         th, td {
             padding: 12px;
             text-align: center;
-            border: 1px solid #dee2e6;
+            border: 1px solid #44484D;
         }
         th {
-            background-color: #131517;
-            color: #1F687D;
+            background-color: #FF3819;
+            color: #FFFFFF;
             cursor: pointer;
         }
         tr:nth-child(even) {
@@ -39,20 +39,24 @@
  button {
 	padding: 10px 15px;
 	margin: 5px;
-	background-color: #343a40;
-	color: white;
+	background-color: #FF3819;
+	color: #FFFFFF;
 	border: none;
 	cursor: pointer;
+   transition: background-color 0.3s ease; 
 }
  button:hover {
-	background-color: #495057;
+	background-color: #FF5733;
 } 
     </style>
 </>
 <body>
 
-<h1>PENTA LEAGUE</h1>
-<table id="leadTable">
+<div style="display: flex; align-items: center; justify-content: center; background-color: #FF3819;">
+    <h1 style="display: flex; align-items: center; color: #FFFFFF;">
+        <img src="src/main/resources/logoPentaLeague.png" alt="Logo" style="width: 100px; height:100px;">
+    </h1>
+</div><table id="leadTable">
     <thead>
         <tr>
             <th onclick="sortTable(0)">RANK</th>

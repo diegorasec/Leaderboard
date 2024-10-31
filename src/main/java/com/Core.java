@@ -38,7 +38,7 @@ public class Core {
 			        ProcessBuilder builder = new ProcessBuilder(Arrays.asList("cmd.exe", "/c", caminhoDoBat));
 			        builder.inheritIO();
 			        builder.start(); 
-					Thread.sleep(1200);
+					Thread.sleep(120000);
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -247,14 +247,6 @@ public class Core {
         .append("	cursor: pointer;\n")
         .append("   transition: background-color 0.3s ease; \n")
         .append("}\n")
-        .append(" @media (max-width: 600px) {\r\n")
-        .append("            table, th, td {\r\n")
-        .append("                font-size: 14px; /* Tamanho da fonte menor em telas pequenas */\r\n")
-        .append("            }\r\n")
-        .append("            h1 {\r\n")
-        .append("                font-size: 24px; /* Ajuste o tamanho do título em dispositivos móveis */\r\n")
-        .append("            }\r\n")
-        .append("        }")
 		.append("    </style>\r\n")
 		.append("</>\r\n")
 		.append("<body>\r\n")

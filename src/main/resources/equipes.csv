@@ -1,9 +1,9 @@
 ID,NOME,CATEGORIAID,MEMBROS
-1,Equipe 1,1,
-2,Equipe 2,1,
-3,Equipe 3,1,
-4,Equipe 4,1,
-5,Equipe 5,1,
-6,Equipe 6,1,
-7,Equipe 7,1,
-8,Equipe 8,1,
+1,Equipe 1,1,EQP1/M2/M3/M4/M5/M6
+2,Equipe 2,1,EQP2/M2/M3/M4/M5/M7
+3,Equipe 3,1,EQP3/M2/M3/M4/M5/M8
+4,Equipe 4,1,EQP4/M2/M3/M4/M5/M9
+5,Equipe 5,1,EQP5/M2/M3/M4/M5/M10
+6,Equipe 6,1,EQP6/M2/M3/M4/M5/M11
+7,Equipe 7,1,EQP7/M2/M3/M4/M5/M12
+8,Equipe 8,1,EQP8/M2/M3/M4/M5/M13

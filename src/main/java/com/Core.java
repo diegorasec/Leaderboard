@@ -27,9 +27,9 @@ public class Core {
 	static String PATH_RESOURCES = "C:\\Users\\dcesar\\eclipse-workspace\\Leaderboard\\src\\main\\resources\\";
 
 	public static void main(String[] args)  {
-		Runnable task = () -> {
+		//Runnable task = () -> {
 			try {
-				while (true) {
+				//while (true) {
 					Map<Categoria, List<Equipe>> lead = carregaLeaderboard();
 					calculaPontos(lead);
 					String filePath = "leaderboard.html";
@@ -38,14 +38,14 @@ public class Core {
 			        ProcessBuilder builder = new ProcessBuilder(Arrays.asList("cmd.exe", "/c", caminhoDoBat));
 			        builder.inheritIO();
 			        builder.start(); 
-					Thread.sleep(120000);
-				}
+					//Thread.sleep(1200);
+				//}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		};
-		Thread thread = new Thread(task);
-		thread.start();
+		//};
+		//Thread thread = new Thread(task);
+		//thread.start();
 					
 	}
 
@@ -73,16 +73,30 @@ public class Core {
 			Integer pointsLast = 0;
 			Integer positionLast = 0;
 			for (Equipe e : equipeOpt) {
+				
 				if(pointsLast > 0 && positionLast > 0 &&
 						e.getPoints().equals(pointsLast)) {
 					htmlContent.append("<tr>\n")
 					.append("            <td>" + positionLast + "</td>\n")
-					.append("            <td>" + e.getNome() + "</td>\n")
+					.append("            <td><button onclick=\"hideShowDiv(\'dv"+i+"\')\">+</button>"
+					+ e.getNome()  
+					+"<div style=\"display:none;\" id=\"dv"+i+"\">");
+					for(String atleta : e.getMembros()) {
+						htmlContent.append(atleta + "<br/>");
+					}
+					htmlContent.append("</div></td>\n")
 					.append("            <td> "+ e.getPoints() + " </td>\n");
+							
 				} else {
 					htmlContent.append("<tr>\n")
 					.append("            <td>" + i + "</td>\n")
-					.append("            <td>" + e.getNome() + "</td>\n")
+					.append("            <td><button onclick=\"hideShowDiv(\'dv"+i+"\')\">+</button>"
+					+ e.getNome()  
+					+"<div style=\"display:none;\" id=\"dv"+i+"\">");
+					for(String atleta : e.getMembros()) {
+						htmlContent.append(atleta + "<br/>");
+					}
+					htmlContent.append("</div></td>\n")
 					.append("            <td> "+ e.getPoints() + " </td>\n");
 					positionLast = i;
 				}
@@ -228,17 +242,12 @@ public class Core {
         .append("            height: 18px;\n")
         .append("        }\n")
         .append(" button {\n")
-        .append("	padding: 10px 15px;\n")
-        .append("	margin: 5px;\n")
-        .append("	background-color: #FF3819;\n")
+        .append("	background-color: transparent; \n")
         .append("	color: #FFFFFF;\n")
         .append("	border: none;\n")
         .append("	cursor: pointer;\n")
         .append("   transition: background-color 0.3s ease; \n")
         .append("}\n")
-        .append(" button:hover {\n")
-        .append("	background-color: #FF5733;\n")
-        .append("} \n")
         .append(" @media (max-width: 600px) {\r\n")
         .append("            table, th, td {\r\n")
         .append("                font-size: 14px; /* Tamanho da fonte menor em telas pequenas */\r\n")
@@ -354,6 +363,13 @@ public class Core {
 				+ "        var match = text.match(/\\(([^)]+)\\)/);\r\n"
 				+ "        return match ? match[1] : text;\r\n"
 				+ "    }\r\n"
+				+ "    function hideShowDiv(idDiv){\r\n"
+				+ "    	if(document.getElementById(idDiv).style.display == 'block'){\r\n"
+				+ "    		document.getElementById(idDiv).style.display = 'none';\r\n"
+				+ "    	} else {\r\n"
+				+ "    		document.getElementById(idDiv).style.display = 'block';\r\n"
+				+ "    	}\r\n"
+				+ "    }\r\n"				
 				+ "</script>");		
 		
 		

@@ -38,7 +38,7 @@ public class Core {
 			        ProcessBuilder builder = new ProcessBuilder(Arrays.asList("cmd.exe", "/c", caminhoDoBat));
 			        builder.inheritIO();
 			        builder.start(); 
-					Thread.sleep(120000);
+					Thread.sleep(30000);
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -73,7 +73,7 @@ public class Core {
 			Integer positionLast = 0;
 			for (Equipe e : equipeOpt) {
 				String equipe = e.getNome().replace(" ", "");
-				if(pointsLast > 0 && positionLast > 0 &&
+				if(pointsLast >= 0 && positionLast >= 0 &&
 						e.getPoints().equals(pointsLast)) {
 					htmlContent.append("<tr>\n")
 					.append("            <td>" + positionLast + "</td>\n")

@@ -27,9 +27,9 @@ public class Core {
 	static String PATH_RESOURCES = "C:\\Users\\dcesar\\eclipse-workspace\\Leaderboard\\src\\main\\resources\\";
 
 	public static void main(String[] args)  {
-		//Runnable task = () -> {
+		Runnable task = () -> {
 			try {
-				//while (true) {
+				while (true) {
 					Map<Categoria, List<Equipe>> lead = carregaLeaderboard();
 					calculaPontos(lead);
 					String filePath = "leaderboard.html";
@@ -38,15 +38,14 @@ public class Core {
 			        ProcessBuilder builder = new ProcessBuilder(Arrays.asList("cmd.exe", "/c", caminhoDoBat));
 			        builder.inheritIO();
 			        builder.start(); 
-					//Thread.sleep(1200);
-				//}
+					Thread.sleep(1200);
+				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		//};
-		//Thread thread = new Thread(task);
-		//thread.start();
-					
+		};
+		Thread thread = new Thread(task);
+		thread.start();					
 	}
 
 

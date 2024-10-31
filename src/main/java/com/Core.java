@@ -72,14 +72,14 @@ public class Core {
 			Integer pointsLast = 0;
 			Integer positionLast = 0;
 			for (Equipe e : equipeOpt) {
-				
+				String equipe = e.getNome().replace(" ", "");
 				if(pointsLast > 0 && positionLast > 0 &&
 						e.getPoints().equals(pointsLast)) {
 					htmlContent.append("<tr>\n")
 					.append("            <td>" + positionLast + "</td>\n")
-					.append("            <td><button onclick=\"hideShowDiv(\'dv"+i+"\')\">+</button>"
+					.append("            <td><button onclick=\"hideShowDiv(\'"+equipe+"\')\">+</button>"
 					+ e.getNome()  
-					+"<div style=\"display:none;\" id=\"dv"+i+"\">");
+					+"<div style=\"display:none;\" id=\""+equipe+"\">");
 					for(String atleta : e.getMembros()) {
 						htmlContent.append(atleta + "<br/>");
 					}
@@ -89,9 +89,9 @@ public class Core {
 				} else {
 					htmlContent.append("<tr>\n")
 					.append("            <td>" + i + "</td>\n")
-					.append("            <td><button onclick=\"hideShowDiv(\'dv"+i+"\')\">+</button>"
+					.append("            <td><button onclick=\"hideShowDiv(\'"+equipe+"\')\">+</button>"
 					+ e.getNome()  
-					+"<div style=\"display:none;\" id=\"dv"+i+"\">");
+					+"<div style=\"display:none;\" id=\""+equipe+"\">");
 					for(String atleta : e.getMembros()) {
 						htmlContent.append(atleta + "<br/>");
 					}

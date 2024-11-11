@@ -261,7 +261,7 @@ public class Core {
 		.append("\r\n")
 		.append("<div style=\"display: flex; align-items: center; justify-content: center; background-color: #FF3819;\">\r\n"
 				+ "    <h1 style=\"display: flex; align-items: center; color: #FFFFFF;\">\r\n"
-				+ "        <img src=\"src/main/resources/logoPentaLeague.png\" alt=\"Logo\" style=\"width: 100px; height:100px;\">\r\n"
+				+ "        <img src=\"src/main/resources/logoPentaLeague.png\" alt=\"Logo\" style=\"width: 180px; height:150px;\">\r\n"
 				+ "    </h1>\r\n"
 				+ "</div>");
 		/*

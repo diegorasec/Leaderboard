@@ -1,7 +1,12 @@
 ID,NOME,CATEGORIAID,MEMBROS
-1,Penta League Equipe 1,1,Iniciante A1/Iniciante B1/Intermediário A1/Intermediário B1/Avançado A1/Avançado B1
-2,Penta League Equipe 2,1,Iniciante A2/Iniciante B2/Intermediário A2/Intermediário B2/Avançado A2/Avançado B2
-3,Penta League Equipe 3,1,Iniciante A3/Iniciante B3/Intermediário A3/Intermediário B3/Avançado A3/Avançado B3
-4,Penta League Equipe 4,1,Iniciante A4/Iniciante B4/Intermediário A4/Intermediário B4/Avançado A4/Avançado B4
-5,Penta League Equipe 5,1,Iniciante A5/Iniciante B5/Intermediário A5/Intermediário B5/Avançado A5/Avançado B5
-6,Penta League Equipe 6,1,Iniciante A6/Iniciante B6/Intermediário A6/Intermediário B6/Avançado A6/Avançado B6
+1,Equipe Laranja,1,Raoni/Natalia/Ariane/Lucas M./Vanessa/Camila H
+2,Equipe Azul,1,REnan/Karen M./Allan/Luke/Giulia/Andreia
+3,Equipe Branco,1,Eliezer/Jéssica/Isa Marton/Tio Arley/Arlete/Helo
+4,Equipe Verde,1,Ana Júlia/Otávio/Isa Kleiner/Iago/Débi/Érika
+5,Equipe Preto,1,Thais/Rafa Q./Chapa/Gabriel/Elaine/Carol
+6,Equipe 6,1,Paulinha/Du/Ryan/Mayara/Aline/Victoria
+7,Equipe Vermelho,Iago/Matheus/Nayara Fahl/Stefani/Ju Speglich/Fabi Roder
+8,Equipe 8,1,Vitinho/Bruno Gil/Karen C./Dani Roder/Carol M./Rinaldo
+9,Equipe 9,1,Thiago T./Rafa P./Aninha/Thati/Cris/Samyra
+10,Equipe Rosa,1,Diego/Aldo/Gabi Fahl/Ju/Leticia/Karine
+

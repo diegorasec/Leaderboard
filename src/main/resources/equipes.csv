@@ -1,6 +1,6 @@
 ID,NOME,CATEGORIAID,MEMBROS
 1,Equipe Laranja,1,Raoni/Natalia/Ariane/Lucas M./Vanessa/Camila H
-2,Equipe Azul,1,REnan/Karen M./Allan/Luke/Giulia/Andreia
+2,Equipe Azul,1,Renan/Karen M./Allan/Luke/Giulia/Andreia
 3,Equipe Branco,1,Eliezer/Jéssica/Isa Marton/Tio Arley/Arlete/Helo
 4,Equipe Verde,1,Ana Júlia/Otávio/Isa Kleiner/Iago/Débi/Érika
 5,Equipe Preto,1,Thais/Rafa Q./Chapa/Gabriel/Elaine/Carol
@@ -9,4 +9,3 @@ ID,NOME,CATEGORIAID,MEMBROS
 8,Equipe 8,1,Vitinho/Bruno Gil/Karen C./Dani Roder/Carol M./Rinaldo
 9,Equipe 9,1,Thiago T./Rafa P./Aninha/Thati/Cris/Samyra
 10,Equipe Rosa,1,Diego/Aldo/Gabi Fahl/Ju/Leticia/Karine
-

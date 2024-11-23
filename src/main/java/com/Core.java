@@ -79,7 +79,8 @@ public class Core {
 					.append("            <td>" + positionLast + "</td>\n")
 					.append("            <td><button onclick=\"hideShowDiv(\'"+equipe+"\')\">+</button>"
 					+ e.getNome()  
-					+"<div style=\"display:none;\" id=\""+equipe+"\">");
+					+"<div style=\"display:none;\" id=\""+equipe+"\">"
+					+"<br/>");
 					for(String atleta : e.getMembros()) {
 						htmlContent.append(atleta + "<br/>");
 					}

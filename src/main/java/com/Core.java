@@ -38,7 +38,7 @@ public class Core {
 			        ProcessBuilder builder = new ProcessBuilder(Arrays.asList("cmd.exe", "/c", caminhoDoBat));
 			        builder.inheritIO();
 			        builder.start(); 
-					Thread.sleep(30000);
+					Thread.sleep(300);
 				}
 			} catch (Exception e) {
 				e.printStackTrace();

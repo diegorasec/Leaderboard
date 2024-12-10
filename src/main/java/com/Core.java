@@ -79,14 +79,25 @@ public class Core {
 					.append("            <td>" + positionLast + "</td>\n")
 					.append("            <td><button onclick=\"hideShowDiv(\'"+equipe+"\')\">+</button>"
 					+ e.getNome()  
-					+"<div style=\"display:none;\" id=\""+equipe+"\">"
+					+"<div style=\"display:none;\" id=\""+equipe+"\">");
 					
-+"<table style=\"width: 70%;  border-collapse: collapse; border: none;\">"
-        +"<tr>"
-            +"<td style=\"width: 100px; text-align: center; vertical-align: top;\">"
-                +"<img src=\"src/main/resources/img/"+equipe+".png\" alt=\"Imagem Equipe\" style=\"width: 100px; height: 100px; margin-bottom: 0px;\">"
-            +"</td>"
-            +"<td style=\"vertical-align: top; padding-left: 10px;\">");
+					if(equipe.equalsIgnoreCase("laranja")) {
+						htmlContent.append("<table style=\"width: 70%;  border-collapse: collapse; border: none;\">"
+						        +"<tr>"
+						            +"<td style=\"width: 130px; text-align: center; vertical-align: top;\">"
+						                +"<img src=\"src/main/resources/img/"+equipe+".png\" alt=\"Imagem Equipe\" style=\"width: 130px; height: 100px; margin-bottom: 0px;\">"
+						            +"</td>"
+						            +"<td style=\"vertical-align: top; padding-left: 10px;\">");
+						
+					} else {
+						htmlContent.append("<table style=\"width: 70%;  border-collapse: collapse; border: none;\">"
+						        +"<tr>"
+						            +"<td style=\"width: 100px; text-align: center; vertical-align: top;\">"
+						                +"<img src=\"src/main/resources/img/"+equipe+".png\" alt=\"Imagem Equipe\" style=\"width: 100px; height: 100px; margin-bottom: 0px;\">"
+						            +"</td>"
+						            +"<td style=\"vertical-align: top; padding-left: 10px;\">");
+						
+					}
 			for(String atleta : e.getMembros()) {
 				htmlContent.append(atleta + "<br/>");
 			}

@@ -85,7 +85,7 @@ public class Core {
 						htmlContent.append("<table style=\"width: 70%;  border-collapse: collapse; border: none;\">"
 						        +"<tr>"
 						            +"<td style=\"width: 140px; text-align: center; vertical-align: top;\">"
-						                +"<img src=\"src/main/resources/img/"+equipe+".png\" alt=\"Imagem Equipe\" style=\"width: 140px; height: 80px; margin-bottom: 0px;\">"
+						                +"<img src=\"src/main/resources/img/"+equipe+".png\" alt=\"Imagem Equipe\" style=\"width: 140px; height: 100px; margin-bottom: 0px;\">"
 						            +"</td>"
 						            +"<td style=\"vertical-align: top; padding-left: 10px;\">");
 						

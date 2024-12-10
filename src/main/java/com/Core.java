@@ -270,7 +270,7 @@ public class Core {
         .append("	cursor: pointer;\n")
         .append("   transition: background-color 0.3s ease; \n")
         .append("}\n")
-        .append(" @media (max-width: 600px) {\r\n")
+        .append(" @media (max-width: 400px) {\r\n")
         .append("            table, th, td {\r\n")
         .append("                font-size: 14px; /* Tamanho da fonte menor em telas pequenas */\r\n")
         .append("            }\r\n")

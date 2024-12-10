@@ -80,10 +80,21 @@ public class Core {
 					.append("            <td><button onclick=\"hideShowDiv(\'"+equipe+"\')\">+</button>"
 					+ e.getNome()  
 					+"<div style=\"display:none;\" id=\""+equipe+"\">"
-					+"<br/>");
-					for(String atleta : e.getMembros()) {
-						htmlContent.append(atleta + "<br/>");
-					}
+					
++"<table style=\"width: 70%;  border-collapse: collapse; border: none;\">"
+        +"<tr>"
+            +"<td style=\"width: 100px; text-align: center; vertical-align: top;\">"
+                +"<img src=\"src/main/resources/img/azul.png\" alt=\"Imagem Equipe Azul\" style=\"width: 100px; height: 100px; margin-bottom: 0px;\">"
+            +"</td>"
+            +"<td style=\"vertical-align: top; padding-left: 10px;\">");
+			for(String atleta : e.getMembros()) {
+				htmlContent.append(atleta + "<br/>");
+			}
+
+			htmlContent.append("</td>" +"</tr>" +"</table>");					
+					
+					
+					
 					htmlContent.append("</div></td>\n")
 					.append("            <td> "+ e.getPoints() + " </td>\n");
 							

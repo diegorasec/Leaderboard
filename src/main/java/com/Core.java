@@ -84,7 +84,7 @@ public class Core {
 +"<table style=\"width: 70%;  border-collapse: collapse; border: none;\">"
         +"<tr>"
             +"<td style=\"width: 100px; text-align: center; vertical-align: top;\">"
-                +"<img src=\"src/main/resources/img/azul.png\" alt=\"Imagem Equipe Azul\" style=\"width: 100px; height: 100px; margin-bottom: 0px;\">"
+                +"<img src=\"src/main/resources/img/"+equipe+".png\" alt=\"Imagem Equipe\" style=\"width: 100px; height: 100px; margin-bottom: 0px;\">"
             +"</td>"
             +"<td style=\"vertical-align: top; padding-left: 10px;\">");
 			for(String atleta : e.getMembros()) {

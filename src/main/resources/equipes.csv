@@ -1,11 +1,11 @@
 ID,NOME,CATEGORIAID,MEMBROS
-1,Equipe Laranja,1,Raoni/Natalia/Ariane/Lucas M./Vanessa/Camila H
-2,Equipe Azul,1,Renan/Karen M./Allan/Luke/Giulia/Andreia
-3,Equipe Branco,1,Eliezer/Jéssica/Isa Marton/Tio Arley/Arlete/Helo
-4,Equipe Verde,1,Ana Júlia/Otávio/Isa Kleiner/Iago/Débi/Érika
-5,Equipe Preto,1,Thais/Rafa Q./Chapa/Gabriel/Elaine/Carol
-6,Equipe Amarela,1,Paulinha/Du/Ryan/Mayara/Aline/Victoria
-7,Equipe Vermelho,1,Iago/Matheus/Nayara Fahl/Stefani/Ju Speglich/Fabi Roder
-8,Equipe Roxo,1,Vitinho/Bruno Gil/Karen C./Dani Roder/Carol M./Rinaldo
-9,Equipe Marrom,1,Thiago T./Rafa P./Aninha/Thati/Cris/Samyra
-10,Equipe Rosa,1,Diego/Aldo/Gabi Fahl/Ju/Leticia/Karine
+1,Laranja,1,Raoni/Natalia/Ariane/Lucas M./Vanessa/Camila H
+2,Azul,1,Renan/Karen M./Allan/Luke/Giulia/Andreia
+3,Branco,1,Eliezer/Jéssica/Isa Marton/Tio Arley/Arlete/Helo
+4,Verde,1,Ana Júlia/Otávio/Isa Kleiner/Iago/Débi/Érika
+5,Preto,1,Thais/Rafa Q./Chapa/Gabriel/Elaine/Carol
+6,Amarela,1,Paulinha/Du/Ryan/Mayara/Aline/Victoria
+7,Vermelho,1,Iago/Matheus/Nayara Fahl/Stefani/Ju Speglich/Fabi Roder
+8,Roxo,1,Vitinho/Bruno Gil/Karen C./Dani Roder/Carol M./Rinaldo
+9,Marrom,1,Thiago T./Rafa P./Aninha/Thati/Cris/Samyra
+10,Rosa,1,Diego/Aldo/Gabi Fahl/Ju/Leticia/Karine

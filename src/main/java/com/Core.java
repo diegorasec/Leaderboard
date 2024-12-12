@@ -78,7 +78,7 @@ public class Core {
 				if (pointsLast >= 0 && positionLast >= 0 && e.getPoints().equals(pointsLast)) {
 					htmlContent.append("<tr>\n").append("            <td>" + positionLast + "</td>\n")
 							.append("            <td><button onclick=\"hideShowDiv(\'" + equipe + "\')\">+</button>"
-									+ e.getNome() + "<div style=\"display:none;\" id=\"" + equipe + "\">");
+									+ e.getNome() + "<div style=\"display:none;\" id=\"" + equipe + "\">").append("<br/><br/>");
 					
 					for (String atleta : e.getMembros()) {
 						htmlContent.append(atleta + "<br/>");
@@ -89,7 +89,7 @@ public class Core {
 				} else {
 					htmlContent.append("<tr>\n").append("            <td>" + i + "</td>\n")
 							.append("            <td><button onclick=\"hideShowDiv(\'" + equipe + "\')\">+</button>"
-									+ e.getNome() + "<div style=\"display:none;\" id=\"" + equipe + "\">");
+									+ e.getNome() + "<div style=\"display:none;\" id=\"" + equipe + "\">").append("<br/><br/>");
 
 					for (String atleta : e.getMembros()) {
 						htmlContent.append(atleta + "<br/>");

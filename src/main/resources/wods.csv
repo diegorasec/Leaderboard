@@ -1,13 +1,13 @@
 ID,NOME,DESCRICAO,TIPOID
-1,1A,A,1
-2,1B,A,2
-3,1C,A,1
-4,1D,A,2
-5,2A-DL,A,3
-6,2A-CL,A,3
-7,2A-SN,A,3
-8,2B,A,1
-9,3A,A,1
-10,3B,A,1
-11,3C,A,1
-12,3D,A,1
+1,Bike,A,1
+2,Max Remo,A,2
+3,Remo,A,1
+4,MAx Bike,A,2
+5,Deadlift,A,3
+6,Hang Clean,A,3
+7,Hang Snatch,A,3
+8,Burpees+LPO,A,1
+9,Corda+Gym,A,1
+10,Box+HSPU-TrioA,A,1
+11,Box+Push-TrioB,A,1
+12,Togheter,A,1

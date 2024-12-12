@@ -76,61 +76,24 @@ public class Core {
 			for (Equipe e : equipeOpt) {
 				String equipe = e.getNome().replace(" ", "");
 				if (pointsLast >= 0 && positionLast >= 0 && e.getPoints().equals(pointsLast)) {
-					htmlContent.append("<tr>\n")
-					           .append("            <td>" + positionLast + "</td>\n")
-							    .append("            <td><button onclick=\"hideShowDiv(\'" + equipe + "\')\">+</button>"
+					htmlContent.append("<tr>\n").append("            <td>" + positionLast + "</td>\n")
+							.append("            <td><button onclick=\"hideShowDiv(\'" + equipe + "\')\">+</button>"
 									+ e.getNome() + "<div style=\"display:none;\" id=\"" + equipe + "\">");
-
-				/*	if (equipe.equalsIgnoreCase("laranja")) {
-						htmlContent.append("<table style=\"width: 70%;  border-collapse: collapse; border: none;\">"
-								+ "<tr>" + "<td style=\"width: 140px; text-align: center; vertical-align: top;\">"
-								+ "<img src=\"src/main/resources/img/" + equipe
-								+ ".png\" alt=\"Imagem Equipe\" style=\"width: 140px; height: 100px; margin-bottom: 0px;\">"
-								+ "</td>" + "<td style=\"vertical-align: top; padding-left: 10px;\">");
-
-					} else {
-						htmlContent.append("<table style=\"width: 70%;  border-collapse: collapse; border: none;\">"
-								+ "<tr>" + "<td style=\"width: 100px; text-align: center; vertical-align: top;\">"
-								+ "<img src=\"src/main/resources/img/" + equipe
-								+ ".png\" alt=\"Imagem Equipe\" style=\"width: 100px; height: 100px; margin-bottom: 0px;\">"
-								+ "</td>" + "<td style=\"vertical-align: top; padding-left: 10px;\">");
-					}*/
 					for (String atleta : e.getMembros()) {
 						htmlContent.append(atleta + "<br/>");
 					}
-
-					//htmlContent.append("</td>" + "</tr>" + "</table>");
 
 					htmlContent.append("</div></td>\n").append("            <td> " + e.getPoints() + " </td>\n");
 
 				} else {
-					htmlContent.append("<tr>\n")
-					           .append("            <td>" + i + "</td>\n")
-							   .append("            <td><button onclick=\"hideShowDiv(\'" + equipe + "\')\">+</button>"
+					htmlContent.append("<tr>\n").append("            <td>" + i + "</td>\n")
+							.append("            <td><button onclick=\"hideShowDiv(\'" + equipe + "\')\">+</button>"
 									+ e.getNome() + "<div style=\"display:none;\" id=\"" + equipe + "\">");
-
-					/*if (equipe.equalsIgnoreCase("laranja")) {
-						htmlContent.append("<table style=\"width: 70%;  border-collapse: collapse; border: none;\">"
-								+ "<tr>" + "<td style=\"width: 140px; text-align: center; vertical-align: top;\">"
-								+ "<img src=\"src/main/resources/img/" + equipe
-								+ ".png\" alt=\"Imagem Equipe\" style=\"width: 140px; height: 100px; margin-bottom: 0px;\">"
-								+ "</td>" + "<td style=\"vertical-align: top; padding-left: 10px;\">");
-
-					} else {
-						htmlContent.append("<table style=\"width: 70%;  border-collapse: collapse; border: none;\">"
-								+ "<tr>" + "<td style=\"width: 100px; text-align: center; vertical-align: top;\">"
-								+ "<img src=\"src/main/resources/img/" + equipe
-								+ ".png\" alt=\"Imagem Equipe\" style=\"width: 100px; height: 100px; margin-bottom: 0px;\">"
-								+ "</td>" + "<td style=\"vertical-align: top; padding-left: 10px;\">");
-					}*/
 
 					for (String atleta : e.getMembros()) {
 						htmlContent.append(atleta + "<br/>");
 					}
-					
-					//htmlContent.append("</td>" + "</tr>" + "</table>");
-					
-					
+
 					htmlContent.append("</div></td>\n").append("            <td> " + e.getPoints() + " </td>\n");
 					positionLast = i;
 				}

@@ -79,7 +79,7 @@ public class Core {
 					htmlContent.append("<tr>\n").append("            <td>" + positionLast + "</td>\n")
 							.append("            <td><button onclick=\"hideShowDiv(\'" + equipe + "\')\">+</button>"
 									+ e.getNome() + "<div style=\"display:none;\" id=\"" + equipe + "\">");
-					
+					htmlContent.append("<br/>");
 					for (String atleta : e.getMembros()) {
 						htmlContent.append(atleta + "<br/>");
 					}
@@ -91,6 +91,7 @@ public class Core {
 							.append("            <td><button onclick=\"hideShowDiv(\'" + equipe + "\')\">+</button>"
 									+ e.getNome() + "<div style=\"display:none;\" id=\"" + equipe + "\">");
 
+					htmlContent.append("<br/>");
 					for (String atleta : e.getMembros()) {
 						htmlContent.append(atleta + "<br/>");
 					}

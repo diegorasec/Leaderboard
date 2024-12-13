@@ -226,11 +226,8 @@ public class Core {
 				.append("            }\r\n").append("            h1 {\r\n")
 				.append("                font-size: 24px; /* Ajuste o tamanho do título em dispositivos móveis */\r\n")
 				.append("            }\r\n").append("        }").append("    </style>\r\n").append("</>\r\n")
-				.append("<body>\r\n").append("\r\n")
-				.append("<div style=\"display: flex; align-items: center; justify-content: center; background-color: #FF3819;\">\r\n"
-						+ "    <h1 style=\"display: flex; align-items: center; color: #FFFFFF;\">\r\n"
-						+ "        <img src=\"src/main/resources/logoPentaLeague.png\" alt=\"Logo\" style=\"width: 180px; height:150px;\">\r\n"
-						+ "    </h1>\r\n" + "</div>");
+				.append("<body>\r\n").append("\r\n");
+
 		/*
 		 * .append(" <button onclick=\"showDiv('Iniciante')\">Iniciante</button> \n")
 		 * .append(" <button onclick=\"showDiv('Scale')\">Scale</button> \n")

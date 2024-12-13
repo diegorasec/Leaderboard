@@ -241,10 +241,24 @@ public class Core {
 
 	public static String commomHeadTable() {
 		StringBuilder head = new StringBuilder();
-		head.append("<table id=\"leadTable\">\n").append("    <thead>\n").append("        <tr>\n")
-				.append("            <th onclick=\"sortTable(0)\">RANK</th>\n")
-				.append("            <th onclick=\"sortTable(1)\">NAME</th>\n")
-				.append("            <th onclick=\"sortTable(2)\">POINTS</th>\n");
+		head.append("<table id=\"leadTable\">\n").append("    <thead>\n");
+		
+		int colspan = readCSVWods().size() + 3;
+		
+		head.append("<tr> ");
+		head.append("  <th colspan=\""+colspan+"\"> ");
+		head.append("  <div style=\"display: flex; align-items: center; justify-content: center; background-color: #FF3819;\"> ");
+		head.append("	<h1 style=\"display: flex; align-items: center; color: #FFFFFF;\"> ");
+		head.append("		<img src=\"src/main/resources/logoPentaLeague.png\" alt=\"Logo\" style=\"width: 180px; height:150px;\"> ");
+		head.append("	</h1> ");
+		head.append("  </th> ");
+		head.append("</tr> ");		
+		
+		
+		head.append("<tr>\n")
+			.append("            <th onclick=\"sortTable(0)\">RANK</th>\n")
+			.append("            <th onclick=\"sortTable(1)\">NAME</th>\n")
+			.append("            <th onclick=\"sortTable(2)\">POINTS</th>\n");
 		int ind = 3;
 		for (Wod w : readCSVWods()) {
 			head.append("            <th onclick=\"sortTable(" + ind + ")\">" + w.getNome() + "</th>\n");

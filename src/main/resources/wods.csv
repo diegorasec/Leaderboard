@@ -1,8 +1,8 @@
 ID,NOME,DESCRICAO,TIPOID
-1,Bike,A,1
-2,Max Remo,A,2
-3,Remo,A,1
-4,Max Bike,A,2
+1,Remo,A,1
+2,Max WB,A,2
+3,Wallball,A,1
+4,Max Remo,A,2
 5,Deadlift,A,3
 6,Hang Clean,A,3
 7,Hang Snatch,A,3
@@ -10,4 +10,4 @@ ID,NOME,DESCRICAO,TIPOID
 9,Corda+Gym,A,1
 10,Box+HSPU-TrioA,A,1
 11,Box+Push-TrioB,A,1
-12,Togheter,A,1
+12,All Togheter,A,1
